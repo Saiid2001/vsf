@@ -1,0 +1,2 @@
+! all caps and alpha is used to indicate app state
+[A-Z_]+

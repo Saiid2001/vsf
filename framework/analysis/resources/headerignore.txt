@@ -1,0 +1,60 @@
+! x-server for example
+x-[a-zA-Z0-9-]+
+
+! non useful headers
+(?i)(referer|purpose|user-agent|last-modified|request-hash|content-length|accept-encoding|content-encoding|accept-ranges|age|date|server|expires|connection|expires|strict-transport-security|transfer-encoding|vary|via|cache-control)
+
+! cloudfare headers
+(?i)(cf-ray|cf-cache-status|cf-ray|cf-request-id|report-to)
+
+! ignore cookies. they will be analyzed separately
+(?i)(set-cookie|cookie)
+
+! access control
+access-control-[a-zA-Z0-9-]+
+
+content-security-policy-report-only
+content-security-policy
+
+! trace context headers
+(?i)(traceparent|tracestate)
+
+! sec-fetch headers
+sec-[a-zA-Z0-9-]+
+
+! x-frame-options
+attribution-[a-zA-Z0-9-]+
+
+(P|p)riority
+(A|a)ccept
+
+! forbidden headers by the browser: https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name
+(A|a)ccept-(C|c)harset
+(A|a)ccept-(E|e)ncoding
+(A|a)ccess-(C|c)ontrol-(R|r)equest-(H|h)eaders
+(A|a)ccess-(C|c)ontrol-(R|r)equest-(M|m)ethod
+(C|c)onnection
+(C|c)ontent-(L|l)ength
+(C|c)ookie
+(D|d)ate
+(DNT|dnt)
+(E|e)xpect
+(H|h)ost
+(K|k)eep-(A|a)live
+(O|o)rigin
+(P|p)ermissions-(P|p)olicy
+(P|p)roxy-[a-zA-Z0-9-]+
+(S|s)ec-[a-zA-Z0-9-]+
+(R|r)eferer
+(TE|te)
+(T|t)railer
+(T|t)ransfer-(E|e)ncoding
+(U|u)pgrade
+(V|v)ia
+
+! headers starting with :
+:[a-zA-Z0-9-]+
+
+! other headers that are not interesting
+if-none-match
+If-None-Match

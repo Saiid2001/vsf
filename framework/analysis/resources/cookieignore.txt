@@ -1,0 +1,15 @@
+[Ee]xpires
+HttpOnly
+SameSite
+Max-Age
+browsing_session_expiry
+
+! optanon cookies
+Optanon[a-zA-Z0-9-]+
+
+! google analytics cookies
+(?i)(_ga|_gat|_gid|_gac|_gcl_[a-zA-Z0-9-]+)
+_utm[a-zA-Z0-9-]+
+
+! yandex metrica cookies
+(?i)(_ym[a-zA-Z0-9-]+|_ym_uid)

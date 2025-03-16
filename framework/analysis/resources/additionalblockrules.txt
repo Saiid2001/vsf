@@ -1,0 +1,16 @@
+/recaptcha
+/_next/static
+*/site_images/*
+/static
+/pagead
+*/ingest$3p
+*/collect
+*/challenge-platform
+*/sync$3p
+collector.*
+firstpartycookie.*
+snowplow.*
+api.pico.*
+*/auction
+analytics.*
+*/pixel/

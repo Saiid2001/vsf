@@ -1,0 +1,71 @@
+{
+  "name": "improper-auth-crawler",
+  "version": "1.0.0",
+  "description": "Crawler to perform differential crawling between two users simultaneously",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "node dist/program.js",
+    "setup": "node dist/setup/index.js",
+    "test:http-browser": "node --import './test/setup.units.mjs' --test 'dist/swapping/crawler/http_browser.spec.js'",
+    "test:req-template": "node --import './test/setup.units.mjs' --test 'dist/swapping/swap_request.spec.js'"
+  },
+  "bin": {
+    "crawler": "./dist/program.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saiid2001/improper-auth.git"
+  },
+  "author": "Saiid El Hajj Chehade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Saiid2001/improper-auth/issues"
+  },
+  "homepage": "https://github.com/Saiid2001/improper-auth#readme",
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.6",
+    "@inquirer/select": "^2.4.5",
+    "@zip.js/zip.js": "^2.7.48",
+    "argparse": "2.0.1",
+    "commander": "^12.1.0",
+    "csv-parse": "5.3.6",
+    "dotenv": "16.0.3",
+    "md5": "2.3.0",
+    "moment": "2.29.4",
+    "node-fetch": "^2.6.7",
+    "node-gzip": "^1.1.2",
+    "node-libcurl": "^4.0.0",
+    "node-schedule": "2.1.1",
+    "normalize-url": "6.1.0",
+    "pg": "8.9.0",
+    "pino": "8.8.0",
+    "pino-multi-stream": "6.0.0",
+    "pino-pretty": "9.1.1",
+    "playwright": "file:../playwright/packages/playwright",
+    "playwright-core": "file:../playwright/packages/playwright-core",
+    "playwright-mirror": "file:../playwright/playwright-mirror",
+    "reflect-metadata": "0.1.13",
+    "sequelize": "^6.37.3",
+    "sequelize-typescript": "^2.1.6",
+    "tld-extract": "2.1.0",
+    "tree-kill": "^1.2.2",
+    "zeromq": "^6.0.0-beta.20"
+  },
+  "devDependencies": {
+    "@types/node": "18.19.3",
+    "@types/node-fetch": "^2.6.11",
+    "@types/node-gzip": "^1.1.3",
+    "@types/node-schedule": "2.1.0",
+    "@types/uuid": "9.0.1",
+    "@types/validator": "13.7.12",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
+    "@typescript-eslint/parser": "6.4.0",
+    "concurrently": "^9.0.1",
+    "eslint": "8.47.0",
+    "tslib": "2.5.0",
+    "typescript": "^5.5.4"
+  }
+}

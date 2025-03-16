@@ -1,0 +1,14 @@
+# Docker related files
+.dockerignore
+docker-compose.yml
+Dockerfile
+
+# Project files
+create_secrets.py
+README.md
+playwright/playwright-mirror/lib
+crawler/dist
+**/node_modules
+**/__pycache__
+__pycache__
+.git

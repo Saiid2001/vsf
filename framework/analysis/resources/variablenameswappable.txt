@@ -1,0 +1,8 @@
+[a-zA-Z\_\-\.]{4,}key
+uid
+url_[0-9]+
+visitor
+list(Id|id|_id)
+user
+birth
+anon(ymous){0,1}

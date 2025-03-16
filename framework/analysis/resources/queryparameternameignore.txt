@@ -1,0 +1,9 @@
+! query parameter added by JQuery to avoid caching
+_
+
+! navigation related query parameters
+(?i)(referer|url)
+
+! random tokens
+(?i)(token|nonce|rand|rnd)
+(?i)(Token|Nonce|Rand|Rnd)

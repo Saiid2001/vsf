@@ -1,0 +1,653 @@
+﻿candidate_id,status_code,label,request_nature,AC_related,response_expected,credential_loc,object_id_loc
+61,200,Investigate Further,.,,,,
+221,200,non-auth Identifier,api,0,0,cookies,
+225,200,Public Page,api,1,1,cookies,path
+5,200,non-auth Identifier,api,1,1,cookies,body
+14,403,,api,1,1,cookies,body
+59,403,,api,1,1,cookies,path
+53,200,non-auth Identifier,api,1,1,cookies,path
+43,200,ats,ats,0,0,,
+44,200,non-auth Identifier,api,0,0,cookies,
+47,404,,api,1,1,cookies,path
+48,404,,api,1,1,cookies,path
+49,204,Potential Weak Vulnerability,api,1,0,cookies,path
+55,200,Public Resource,api,1,1,cookies,path
+50,403,,api,1,1,cookies,path
+57,200,Public Resource,api,1,1,cookies,path
+51,200,Public Page,api,1,1,cookies,path
+19,403,,api,1,1,cookies,body
+99,302,,api,1,1,cookies,path
+100,404,,api,1,1,cookies,path
+103,200,non-auth Identifier,api,1,1,cookies,path
+106,302,non-auth Identifier,api,1,1,cookies,cookies
+105,200,non-auth Identifier,api,1,1,cookies,cookies
+108,404,,api,1,1,cookies,path
+109,404,,api,1,1,cookies,path
+111,200,Investigate Further,api,1,1,cookies,path
+113,303,,api,1,1,cookies,path
+114,200,Public Resource,api,1,1,cookies,path
+115,200,Public Resource,api,1,1,cookies,path
+131,200,ats,ats,0,0,,
+147,200,ats,ats,0,0,,
+150,400,bad candidate,,0,0,,
+148,400,bad candidate,,0,0,,
+151,400,bad candidate,,0,0,,
+163,405,non-auth Identifier,api,1,1,headers,
+165,200,non-auth Identifier,api,1,1,headers,
+183,200,non-auth Identifier,api,1,1,headers,
+185,200,non-auth Identifier,api,1,1,headers,
+203,200,Vulnerability,api,1,0,cookies,path
+204,200,Vulnerability,api,1,0,cookies,query
+206,200,Public Resource,api,1,0,cookies,
+213,301,Public Resource,api,1,-1,cookies,path
+216,500,,api,1,-1,cookies,query
+217,200,Public Resource,api,1,-1,cookies,query
+215,500,Public Resource,api,1,-1,cookies,query
+371,200,Public Resource,api,0,0,headers+cookies,
+372,403,,api,1,1,headers+cookies,query
+431,200,ats,ats,0,0,,
+429,200,ats,ats,0,0,,
+448,200,ats,ats,0,0,,
+449,200,Weak Vulnerability,api,1,-1,cookies,query
+443,400,ats,ats,0,0,,
+492,404,,api,1,1,cookies,path
+663,401,,api,1,1,cookies,body
+661,200,Vulnerability,api,1,0,headers,body
+681,200,ats,ats,0,0,,
+493,200,non-auth Identifier,api,0,0,cookies,
+536,200,ats,ats,0,0,,
+531,403,,api,1,1,cookies,query
+532,500,bad candidate,,0,0,,
+537,200,Weak Vulnerability. Hard to guess value,api,1,0,cookies,path
+648,404,,api,1,1,cookies,path
+646,500,ats,ats,0,0,,
+649,400,ats,ats,0,0,,
+652,200,security request,,0,0,,
+654,200,non-auth Identifier,api,0,1,cookies,
+655,200,non-auth Identifier,api,0,0,,
+653,302,bad candidate,,0,0,,
+657,200,ats,ats,0,0,,
+659,200,ats,ats,0,0,,
+981,200,ats,ats,0,0,,
+751,404,,api,1,1,cookies,path
+756,200,Vulnerability,api,1,0,cookies,path
+707,400,ats + bad candidate,,0,0,,
+717,200,Vulnerability,api,1,0,cookies,path
+760,200,Vulnerability,api,1,0,cookies,path
+718,404,,api,1,1,cookies,path
+715,404,Partial Vulnerability,api,1,1,cookies,path
+719,404,,api,1,1,cookies,path
+710,302,,api,1,1,cookies,path
+814,403,Third-party request to trusted service,api,1,1,query,query
+788,403,,api,1,1,cookies,path
+789,200,Weak Vulnerability. Hard to guess value,api,1,0,cookies,path
+790,403,,api,1,0,cookies,path
+797,200,Weak Vulnerability. Hard to guess value,api,1,0,cookies,path
+798,404,Investigate Further,api,1,1,cookies,path
+809,404,Partial Vulnerability,api,1,0,cookies,path
+858,404,,api,1,1,cookies,path
+862,503,Service Temporarily Down,api,0,0,,
+867,403,Third-party request to trusted service,api,1,1,query,query
+911,400,ats,ats,0,0,,
+936,200,non-auth Identifier,api,0,1,,
+935,200,non-auth Identifier,api,0,1,,
+985,400,ats + bad candidate,ats,0,0,,
+988,200,ats,ats,0,0,,
+994,404,,api,1,1,cookies,path
+1059,302,ats,ats,0,0,,
+1060,400,security request,,0,0,,
+1061,400,security request,,0,0,,
+1066,200,Public Resource,api,1,1,cookies,body
+1064,403,,api,1,1,cookies,body
+1073,400,,api,1,1,cookies,body
+1069,200,Weak Vulnerability,api,1,1,cookies,body
+1100,200,security request,,0,0,,
+1087,200,security request,,0,0,,
+1088,200,security request,,0,0,,
+1108,204,ats,ats,0,0,,
+1752,200,ats,ats,0,0,,
+1763,403,security request,,0,0,,
+1771,200,non-auth Identifier,,0,0,,
+1349,400,ats + bad candidate,,0,0,,
+1437,200,ats,ats,0,0,,
+1321,200,security request,api,0,0,,
+1323,400,ats + bad candidate,,0,0,,
+1324,400,bad candidate,,0,0,,
+1375,504,ats,,0,0,,
+1414,400,Blocked at Cloudeflare,api,0,0,,
+1661,200,ats,ats,0,0,,
+1453,403,Third-party request to trusted service,api,1,1,query,query
+1555,401,,api,1,1,headers,body
+1344,200,Partial Vulnerability,api,1,0,headers,query
+1343,200,Partial Vulnerability,api,1,0,headers,query
+2020,200,ats,ats,0,0,,
+3117,400,bad candidate,,0,0,,
+3118,400,Public Resource,api,0,1,cookies,
+3111,200,Public Resource,api,0,1,cookies,
+3067,200,Weak Vulnerability. Hard to guess value,api,1,0,cookies,body
+3054,400,Blocked at Cloudeflare,,0,0,,
+3051,401,,api,1,1,cookies,body
+3071,301,redirect,api,1,-1,cookies,path
+2022,400,Blocked at Cloudeflare,api,1,-1,cookies,body
+2215,400,Blocked at Cloudeflare,api,1,-1,cookies,body
+2023,400,Blocked at Cloudeflare,api,1,1,cookies,body
+2042,200,ats,ats,0,0,,
+2280,200,Public Resource,,0,0,,
+2304,200,ats,ats,0,0,,
+2303,200,Public Resource,api,1,0,,
+2305,200,ats,ats,0,0,,
+2412,502,ats,ats,0,0,,
+2413,200,ats,ats,0,0,,
+2395,200,ats,ats,0,0,,
+2369,200,ats,ats,0,0,,
+2370,302,ats,ats,0,0,,
+2447,400,Blocked at Cloudeflare,api,1,-1,cookies,body
+2545,404,non-auth Identifier,api,0,1,cookies,
+2551,400,Blocked at Cloudeflare,api,1,-1,cookies,body
+2552,200,ats,ats,0,0,,
+2451,400,ats,ats,0,0,,
+2452,200,bad candidate,api,1,1,cookies,path
+2469,200,Public Resource,api,0,1,cookies,
+2535,200,ats,ats,0,0,,
+2556,200,ats,ats,0,0,,
+2643,400,Blocked at Cloudeflare,api,1,-1,cookies,body
+2727,200,ats,ats,0,0,,
+2750,200,non-auth Identifier,api,0,1,cookies,
+2941,200,ats,ats,0,0,,
+2966,200,ats,ats,0,0,,
+2732,200,ats,ats,0,0,,
+2767,400,ats,ats,0,0,,
+2968,404,,api,1,1,cookies,query
+2977,200,Partial Vulnerability,api,1,-1,cookies,query
+2970,404,,api,1,1,cookies,query
+2976,404,,api,1,1,cookies,query
+2978,400,bad candidate,,,,,
+2981,404,,api,1,1,cookies,query
+2994,404,,api,1,1,cookies,query
+3010,200,Public Resource,api,0,1,cookies,
+3012,200,Public Resource,api,0,1,cookies,
+3046,405,non-auth Identifier,api,0,1,cookies,
+3031,404,,api,1,1,cookies,query
+3032,404,,api,1,1,cookies,query
+3039,200,Public Resource,api,1,1,cookies,query
+3041,200,Public Resource,api,1,1,cookies,query
+3011,200,Public Resource,api,1,1,cookies,query
+3049,200,non-auth Identifier,api,0,1,cookies,
+3088,404,non-auth Identifier,api,0,1,cookies,
+3077,200,Public Resource,api,0,1,cookies,
+3087,400,non-auth Identifier,api,0,1,cookies,
+3008,400,bad candidate,,0,0,,
+3074,200,Public Resource,api,0,1,cookies,
+3076,404,,api,1,1,cookies,body
+3086,400,bad candidate,,0,0,,
+3002,404,,api,1,1,cookies,path
+3099,200,Public Resource,api,1,0,cookies,
+3100,400,swapped credential,api,0,1,body,
+3109,200,Public Resource,api,0,1,cookies,
+3115,404,bad candidate,,0,0,,
+3115,404,Public Resource,api,0,1,cookies,
+3111,200,Public Resource,api,0,1,cookies,
+3117,400,bad candidate,,0,0,,
+3118,200,Public Resource,api,0,1,cookies,
+3120,200,Public Resource,api,0,1,cookies,
+3122,200,Public Resource,api,0,1,cookies,
+3125,200,Public Resource,api,0,1,cookies,
+3127,200,ats,ats,0,0,,
+3121,422,ats,ats,0,0,,
+3823,401,,api,1,1,headers,path
+3840,400,,api,1,1,headers,path
+3845,401,,api,1,1,headers,path
+3871,403,Third-party request to trusted service,,0,0,query,
+3990,400,,api,1,1,headers,path
+4011,400,,api,1,1,headers,path
+3816,403,Third-party request to trusted service,api,1,1,headers,path
+3158,200,ats,ats,0,0,,
+3462,200,Weak Vulnerability. Hard to guess value,api,1,0,body,body
+3802,401,,api,1,1,headers,path
+3779,400,,api,1,1,headers,path
+3799,403,Third-party request to trusted service,api,1,1,query,query
+3796,403,Third-party request to trusted service,api,1,1,query,query
+3803,401,,,0,0,,
+4153,401,authentication invalid,ats,0,0,,
+4156,200,Vulnerability,api,1,0,cookies,body
+4161,200,Vulnerability,api,1,0,cookies,body
+4163,200,Vulnerability,api,1,0,cookies,body
+4164,200,ats,ats,0,0,,
+4193,200,Vulnerability,api,1,0,cookies,query
+4195,200,Public Resource,api,0,1,cookies,
+4327,422,,api,1,1,cookies,query
+4239,200,Public Resource,api,0,1,cookies,query
+4261,301,Public Resource,api,0,1,,
+4262,200,,api,1,1,cookies,query
+4266,200,,api,1,1,cookies,path
+4267,401,,api,1,1,cookies,path
+4284,400,bad candidate,,0,0,,
+4285,302,bad candidate,,0,0,,
+4287,302,Public Resource,api,0,1,cookies,
+4294,200,Public Resource,api,1,1,cookies,body
+4303,200,Public Resource,api,1,1,cookies,body
+4330,200,Weak Vulnerability,ats,1,1,cookies,query
+4341,200,Public Resource,,0,0,,
+4342,200,Public Resource,,0,0,,
+4047,200,Public Page,,0,0,,
+4062,200,Public Resource,api,0,1,,
+4123,200,ats,,0,0,,
+4139,200,Public Resource,,0,0,,
+4124,301,Public Page,,0,0,,
+4171,204,security request,,0,0,,
+4174,200,Public Resource,,0,0,,
+4175,403,,api,1,1,cookies,path
+4177,200,Public Resource,,0,0,,
+4129,204,security request,,0,0,,
+4127,200,Public Resource,,0,0,,
+4128,200,Public Resource,,0,0,,
+4135,200,Public Resource,,0,0,,
+4173,404,ats,ats,0,0,,
+4176,200,Public Resource,,0,0,,
+4382,200,ats,ats,0,0,,
+4507,200,ats,ats,0,0,,
+4395,200,ats,ats,0,0,,
+4350,200,',ats,0,0,,
+4354,200,ats,ats,0,0,,
+4361,200,ats,ats,0,0,,
+4429,200,swapped credential,api,1,0,headers,body
+4442,204,non-auth Identifier,api,0,0,,
+4445,200,Weak Vulnerability. Hard to guess value,,0,0,query,query
+4991,400,non-auth Identifier,,0,0,,
+4993,400,non-auth Identifier,,0,0,,
+4993,400,non-auth Identifier,,0,0,,
+4776,400,,api,1,1,headers,path
+4777,400,,api,1,1,headers,path
+4782,400,,api,1,1,headers,path
+4783,400,,api,1,1,headers,path
+4786,400,,api,1,1,headers,path
+4788,400,,api,1,1,headers,path
+4794,400,,api,1,1,headers,path
+4784,400,,api,1,1,headers,path
+4787,400,,api,1,1,headers,path
+4795,400,,api,1,1,headers,path
+4980,200,non-auth Identifier,api,1,1,headers,
+4981,400,non-auth Identifier,api,1,1,headers,
+4763,400,,api,1,1,headers,path
+4760,200,swapped credential,api,1,1,headers,
+4761,400,non-auth Identifier,api,1,1,headers,
+4768,400,,api,1,1,headers,path
+5118,204,ats,,0,0,,
+5142,402,,api,1,1,headers,query
+5251,200,non-auth Identifier,api,1,1,headers,
+5148,200,ats,,0,0,,
+5210,200,Potential Weak Vulnerability,api,1,0,cookies,query
+5211,200,Potential Weak Vulnerability,api,1,0,cookies,query
+5213,200,Potential Weak Vulnerability,api,1,0,cookies,query
+5239,200,Potential Weak Vulnerability,api,1,0,cookies,query
+4918,200,Public Resource,api,1,0,,
+5218,200,Public Page,,0,0,,
+5219,404,,api,1,1,cookies,path
+5220,200,Public Resource,,0,0,,
+5230,200,Public Resource,,0,0,,
+4919,200,ats,ats,0,0,,
+4969,404,,api,1,1,cookies,path
+5247,200,Public Page,api,1,1,cookies,path
+5292,200,Public Resource,,0,0,,
+5293,200,Public Resource,,0,0,,
+5302,200,ats,ats,1,0,cookies,path
+5310,200,Public Page,api,1,1,cookies,
+5307,302,ats,ats,0,0,,
+5300,200,Public Resource,api,0,0,,
+5304,200,ats,,0,0,,
+5323,200,security request,api,0,0,,
+5332,200,ats,,0,0,,
+5330,200,ats,,0,0,,
+5329,200,ats,,0,0,,
+5344,200,non-auth Identifier,api,1,1,headers,path
+5336,400,ats,,0,0,,
+5822,200,Potential Vulnerability,api,1,0,cookies,path
+5823,200,Public Page,,0,0,,
+5825,200,Weak Vulnerability,api,1,0,cookies,path
+5826,200,Public Page,,0,0,,
+5832,200,ats,api,1,1,cookies,query
+5624,200,ats,,0,0,,
+5348,200,ats,,0,0,,
+5474,200,,api,1,1,cookies,query
+5475,200,Investigate Further,,0,0,,
+5844,200,Third-party request to trusted service,,0,0,,
+5878,200,non-auth Identifier,api,1,1,cookies,query
+5883,200,Potential Weak Vulnerability,api,1,1,cookies,query
+5886,,Potential Weak Vulnerability,api,1,1,cookies,query
+5884,200,non-auth Identifier,api,1,0,cookies,query
+5917,200,non-auth Identifier,,0,0,,
+5845,200,Investigate Further,api,1,-1,cookies,query
+6051,403,,api,1,1,cookies,path
+6034,200,Potential Weak Vulnerability,api,1,0,cookies,query
+6101,200,Public Resource,api,1,1,cookies,path
+6006,403,security request,,0,0,,
+6009,200,Public Resource,,0,0,,
+6026,200,swapped credential,,0,0,,
+6061,200,non-auth Identifier,api,1,0,cookies,
+6112,200,Public Resource,api,1,1,cookies,path
+6113,200,Public Resource,,0,0,,
+6114,200,Public Resource,api,1,1,cookies,body
+6126,200,ats,,0,0,,
+6120,200,non-auth Identifier,api,1,1,cookies,
+6140,200,non-auth Identifier,api,0,0,,
+6157,200,Public Resource,api,1,1,cookies,
+6293,200,security request,,0,0,,
+6294,200,Public Page,,0,0,,
+6338,404,,api,1,1,cookies,body
+6339,200,Public Resource,,0,0,,
+6319,200,ats,,0,0,,
+6322,200,ats,,0,0,,
+6324,200,ats,,0,0,,
+6325,200,ats,,0,0,,
+6296,200,security request,,0,0,,
+6299,200,ats,,0,0,,
+6312,200,ats,,0,0,,
+6313,200,ats,,0,0,,
+6426,200,Weak Vulnerability,api,1,0,cookies,path
+6382,200,,api,1,1,cookies,query
+6429,200,non-auth Identifier,,0,0,,
+6434,200,Public Resource,,0,0,,
+6461,200,,api,1,1,cookies,body
+6530,200,ats,,0,0,,
+6441,200,ats,,0,0,,
+6442,403,,api,1,1,body,body
+6449,302,ats,,0,0,,
+6545,200,Vulnerability,api,1,0,cookies,body
+6538,200,non-auth Identifier,api,1,1,cookies,
+6456,200,ats,,0,0,,
+6595,200,non-auth Identifier,,0,0,,
+6598,200,Public Resource,api,1,1,cookies,path
+6716,401,authentication invalid,api,1,1,headers,body
+6720,404,,api,1,1,headers,path
+6722,200,Public Resource,,0,0,,
+6702,200,Public Resource,,0,0,,
+6611,200,Investigate Further,api,1,-1,headers,query
+6662,200,non-auth Identifier,api,1,-1,headers,body
+6689,401,authentication invalid,api,1,1,headers,path
+6613,200,Public Resource,api,1,1,headers,query
+6616,403,ats,,0,0,,
+6617,403,,api,1,1,cookies,path
+6731,200,Potential Weak Vulnerability,api,1,1,cookies,path
+6734,200,Public Page,api,1,1,cookies,path
+6773,302,swapped credential,,0,0,,
+6778,403,Blocked at Cloudeflare,api,1,0,cookies,path
+6772,403,Blocked at Cloudeflare,api,1,0,,
+6817,200,ats,api,1,1,body,body
+6851,200,ats,api,1,1,query,query
+6865,200,,api,0,0,,
+6865,302,Vulnerability,api,1,0,cookies,path
+6866,400,Investigate Further,api,1,-1,cookies,path
+6868,200,Vulnerability,api,1,0,cookies,path
+6869,200,Vulnerability,api,1,0,cookies,path
+7397,200,Vulnerability,api,1,0,cookies,path
+7396,200,Vulnerability,api,1,0,cookies,path
+7391,200,Vulnerability,api,1,0,cookies,path
+6870,200,Vulnerability,api,1,0,cookies,path
+6871,302,Vulnerability,api,1,0,cookies,path
+6819,400,non-auth Identifier,,0,0,,
+6850,200,ats,,0,0,,
+6873,204,security request,,0,0,,
+6876,401,,api,1,1,cookies,body
+6877,200,bad candidate,,0,0,,
+6926,200,,api,1,1,cookies,query
+6916,202,ats,,0,0,,
+7120,200,,api,1,1,cookies,body
+7463,200,Public Page,,0,0,,
+7471,200,non-auth Identifier,api,0,1,,
+6615,200,,api,1,-1,cookies,query
+1630,401,api,api,1,1,headers+cookies,path
+1635,401,api,api,1,1,headers+cookies,path
+1631,401,api,api,1,1,headers+cookies,path
+865,404,,api,1,1,cookies,path
+767,404,,api,1,1,cookies,path
+1632,401,,api,1,1,cookies,path
+6589,,ats,ats,0,0,,
+4335,,ats,ats,0,0,,
+2553,,ats,ats,0,0,,
+6820,,Public Resource,api,0,1,query,
+7069,,Public Resource,api,0,1,query,
+2470,,Public Resource,api,0,1,cookies,
+6925,,Public Resource,api,0,1,body,
+201,,bad candidate,,0,0,,
+179,,bad candidate,,0,0,,
+195,,bad candidate,,0,0,,
+180,,bad candidate,,0,0,,
+198,,bad candidate,,0,0,,
+5319,,Public Resource,,0,0,,
+4938,,Public Resource,,0,0,,
+4924,,Public Resource,,0,0,,
+5215,,Public Resource,,0,0,,
+6634,,Public Resource,,0,0,,
+6626,,Public Resource,,0,0,,
+6627,,Public Resource,,0,0,,
+6729,,Public Resource,,0,0,,
+6631,,Public Resource,,0,0,,
+6728,,Public Resource,,0,0,,
+6726,,Public Resource,,0,0,,
+6624,,Public Resource,,0,0,,
+6625,,Public Resource,,0,0,,
+6725,,Public Resource,,0,0,,
+6727,,Public Resource,,0,0,,
+5238,,Public Resource,,0,0,,
+5228,,Public Resource,,0,0,,
+5225,,Public Resource,,0,0,,
+5214,,Public Resource,,0,0,,
+2446,,Public Resource,,0,0,,
+7461,,Public Resource,,0,0,,
+2427,,Public Resource,,0,0,,
+7432,,Public Resource,,0,0,,
+7441,,Public Resource,,0,0,,
+7438,,Public Resource,,0,0,,
+7447,,Public Resource,,0,0,,
+2347,,Public Resource,,0,0,,
+7414,,Public Resource,,0,0,,
+7426,,Public Resource,,0,0,,
+2353,,Public Resource,,0,0,,
+7423,,Public Resource,,0,0,,
+2430,,Public Resource,,0,0,,
+7444,,Public Resource,,0,0,,
+2283,,Public Resource,,0,0,,
+2323,,Public Resource,,0,0,,
+2329,,Public Resource,,0,0,,
+7404,,Public Resource,,0,0,,
+7402,,Public Resource,,0,0,,
+7403,,Public Resource,,0,0,,
+7405,,Public Resource,,0,0,,
+2311,,Public Resource,,0,0,,
+2334,,Public Resource,,0,0,,
+7407,,Public Resource,,0,0,,
+2439,,Public Resource,,0,0,,
+2313,,Public Resource,,0,0,,
+2325,,Public Resource,,0,0,,
+2343,,Public Resource,,0,0,,
+2337,,Public Resource,,0,0,,
+2331,,Public Resource,,0,0,,
+2419,,Public Resource,,0,0,,
+7406,,Public Resource,,0,0,,
+7408,,Public Resource,,0,0,,
+2293,,Public Resource,,0,0,,
+2284,,Public Resource,,0,0,,
+2420,,Public Resource,,0,0,,
+2436,,Public Resource,,0,0,,
+2339,,Public Resource,,0,0,,
+2418,,Public Resource,,0,0,,
+2424,,Public Resource,,0,0,,
+2423,,Public Resource,,0,0,,
+2330,,Public Resource,,0,0,,
+2338,,Public Resource,,0,0,,
+2415,,Public Resource,,0,0,,
+2291,,Public Resource,,0,0,,
+2327,,Public Resource,,0,0,,
+2292,,Public Resource,,0,0,,
+2281,,Public Resource,,0,0,,
+2416,,Public Resource,,0,0,,
+2321,,Public Resource,,0,0,,
+2277,,Public Resource,,0,0,,
+2422,,Public Resource,,0,0,,
+2279,,Public Resource,,0,0,,
+2295,,Public Resource,,0,0,,
+2332,,Public Resource,,0,0,,
+2324,,Public Resource,,0,0,,
+2286,,Public Resource,,0,0,,
+2306,,Public Resource,,0,0,,
+2433,,Public Resource,,0,0,,
+2414,,Public Resource,,0,0,,
+2288,,Public Resource,,0,0,,
+2290,,Public Resource,,0,0,,
+2315,,Public Resource,,0,0,,
+2319,,Public Resource,,0,0,,
+2294,,Public Resource,,0,0,,
+2312,,Public Resource,,0,0,,
+6571,,Public Resource,,0,0,,
+2275,,Public Resource,,0,0,,
+6548,,ats,,0,0,,
+494,,Public Resource,,0,0,,
+7119,,Public Resource,,0,0,,
+56,,Public Resource,.,0,0,,
+2776,,Public Resource,,0,0,,
+6573,,Public Resource,,0,0,,
+2462,,Public Resource,,0,0,,
+2467,,Public Resource,,0,0,,
+2506,,Public Resource,,0,0,,
+2497,,Public Resource,,0,0,,
+2476,,Public Resource,,0,0,,
+2473,,Public Resource,,0,0,,
+6505,,ats,,0,0,,
+6499,,ats,,0,0,,
+6431,,ats,,0,0,,
+6432,,ats,,0,0,,
+6818,,ats,,0,0,,
+2584,,ats,,0,0,,
+6918,,Public Resource,,0,0,,
+6641,,Public Resource,,0,0,,
+6663,,Public Resource,,0,0,,
+6800,,ats,,0,0,,
+2583,,ats,,0,0,,
+6574,,Public Resource,,0,0,,
+6503,,ats,,0,0,,
+6430,,ats,,0,0,,
+6567,,ats,,0,0,,
+7369,,Public Resource,,0,0,,
+6921,,ats,,0,0,,
+3967,,swapped credential,,0,0,,
+6594,,security request,,0,0,,
+350,,ats,,0,0,,
+7358,,ats,,0,0,,
+7359,,swapped credential,,0,0,,
+7307,,swapped credential,,0,0,,
+2724,,ats,,0,0,,
+7009,,ats,,0,0,,
+2576,,ats,,0,0,,
+3094,,Public Resource,,0,0,,
+210,,Public Resource,,0,0,,
+211,,Public Resource,,0,0,,
+6690,,,api,1,1,headers+cookies,path
+2621,,ats,,0,0,,
+2751,,Public Resource,,0,0,,
+7390,,,api,1,1,cookies,path
+6266,,Public Resource,,0,0,,
+6247,,Public Resource,,0,0,,
+6256,,Public Resource,,0,0,,
+6150,,Public Resource,,0,0,,
+6153,,Public Resource,,0,0,,
+6145,,Public Resource,,0,0,,
+6144,,Public Resource,,0,0,,
+6156,,Public Resource,,0,0,,
+6143,,Public Resource,,0,0,,
+6238,,Public Resource,,0,0,,
+6215,,Public Resource,,0,0,,
+6180,,Public Resource,,0,0,,
+6164,,Public Resource,,0,0,,
+6250,,Public Resource,,0,0,,
+6202,,Public Resource,,0,0,,
+6203,,Public Resource,,0,0,,
+6196,,Public Resource,,0,0,,
+6193,,Public Resource,,0,0,,
+6160,,Public Resource,,0,0,,
+6161,,Public Resource,,0,0,,
+6224,,Public Resource,,0,0,,
+6200,,Public Resource,,0,0,,
+6217,,Public Resource,,0,0,,
+6190,,Public Resource,,0,0,,
+6225,,Public Resource,,0,0,,
+6231,,Public Resource,,0,0,,
+6182,,Public Resource,,0,0,,
+6191,,Public Resource,,0,0,,
+6228,,Public Resource,,0,0,,
+6240,,Public Resource,,0,0,,
+6244,,Public Resource,,0,0,,
+6158,,Public Resource,,0,0,,
+6206,,Public Resource,,0,0,,
+6236,,Public Resource,,0,0,,
+6241,,Public Resource,,0,0,,
+6237,,Public Resource,,0,0,,
+6221,,Public Resource,,0,0,,
+6146,,Public Resource,,0,0,,
+6174,,Public Resource,,0,0,,
+6192,,Public Resource,,0,0,,
+6199,,Public Resource,,0,0,,
+6176,,Public Resource,,0,0,,
+6175,,Public Resource,,0,0,,
+6162,,Public Resource,,0,0,,
+6210,,Public Resource,,0,0,,
+6234,,Public Resource,,0,0,,
+6181,,Public Resource,,0,0,,
+6209,,Public Resource,,0,0,,
+6233,,Public Resource,,0,0,,
+6208,,Public Resource,,0,0,,
+6214,,Public Resource,,0,0,,
+6232,,Public Resource,,0,0,,
+6204,,Public Resource,,0,0,,
+6227,,Public Resource,,0,0,,
+6229,,Public Resource,,0,0,,
+6171,,Public Resource,,0,0,,
+6173,,Public Resource,,0,0,,
+6253,,Public Resource,,0,0,,
+6187,,Public Resource,,0,0,,
+6189,,Public Resource,,0,0,,
+6213,,Public Resource,,0,0,,
+6230,,Public Resource,,0,0,,
+6220,,Public Resource,,0,0,,
+6223,,Public Resource,,0,0,,
+6235,,Public Resource,,0,0,,
+6212,,Public Resource,,0,0,,
+6218,,Public Resource,,0,0,,
+6167,,Public Resource,,0,0,,
+6259,,Public Resource,,0,0,,
+6226,,Public Resource,,0,0,,
+6207,,Public Resource,,0,0,,
+6205,,Public Resource,,0,0,,
+6178,,Public Resource,,0,0,,
+6216,,Public Resource,,0,0,,
+6142,,Public Resource,,0,0,,
+6222,,Public Resource,,0,0,,
+6170,,Public Resource,,0,0,,
+6239,,Public Resource,,0,0,,
+6177,,Public Resource,,0,0,,
+6163,,Public Resource,,0,0,,
+6201,,Public Resource,,0,0,,
+6169,,Public Resource,,0,0,,
+6198,,Public Resource,,0,0,,
+6186,,Public Resource,,0,0,,
+6197,,Public Resource,,0,0,,
+6211,,Public Resource,,0,0,,
+6179,,Public Resource,,0,0,,
+6183,,Public Resource,,0,0,,
+6166,,Public Resource,,0,0,,
+6139,,authentication request,,0,0,,
+6912,,bad candidate,,0,0,,
+6724,,ats,,0,0,,
+6723,,ats,,0,0,,
+6735,,Public Resource,,0,0,,
+370,400,blocked by Cloudflare,api,1,1,headers,path
+352,400,blocked by Cloudflare,api,1,1,headers,path
+5431,,authentication request,,0,0,,
+7472,,Public Resource,,0,0,,
+7470,,authentication request,,0,0,,
+7041,,ats,,0,0,,
+6929,,ats,,0,0,,
+7367,,ats,,0,0,,
+7090,,ats,,0,0,,
+7092,,ats,,0,0,,
+7360,,ats,,0,0,,
+7462,,,api,1,1,cookies,query

@@ -1,0 +1,16 @@
+pandas
+scikit-learn
+numpy
+matplotlib
+psycopg2-binary
+xxhash==3.4.1
+braveblock==0.5.1
+tldextract==5.1.2
+requests==2.32.3
+typing-extensions==4.12.2
+peewee==3.15.4
+bullet==2.2.0
+httpwatcher==0.5.2
+click==8.1.7
+python-dotenv==1.0.1
+deepdiff==8.0.1

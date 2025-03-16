@@ -1,0 +1,136 @@
+name: improper-auth-crawler
+
+# Database configuration
+x-dbenv: &dbenv
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+
+# Experiment configuration
+x-experiment1: &userdiff_experiment
+  EXPERIMENT: userdiff_manual
+  ZMQ_HOST: tcp://accf-auto:5555
+  ZMQ_EXPERIMENT: userdiff_manual
+  ZMQ_ENABLE: "true"
+  DEMO_MODE: "false"
+  START_INSECURE_WEBSERVER: "false"
+  VNC_PASSWORD_FILE: /run/secrets/vnc_password
+  N_WORKERS: 10
+
+x-experiment2: &swap_experiment
+  EXPERIMENT: swap
+  ZMQ_HOST: tcp://accf-auto:5555
+  ZMQ_EXPERIMENT: swap
+  ZMQ_ENABLE: "true"
+  DEMO_MODE: "false"
+  START_INSECURE_WEBSERVER: "false"
+  VNC_PASSWORD_FILE: /run/secrets/vnc_password
+  N_WORKERS: 2
+
+services:
+  crawler-db:
+    image: postgres:16.1
+    restart: always
+    ports:
+      - 55434:5432  
+    secrets:
+      - db_password
+    networks:
+      - db
+    volumes: 
+      - db:/var/lib/postgresql/data
+    environment: *dbenv 
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
+  # Workers for the manual visit experiment
+  userdiff_auto:
+    build:
+      context: .
+      args:
+        <<: *userdiff_experiment
+    depends_on:
+      crawler-db:
+        condition: service_healthy
+    ports:
+      - 55903:5900  
+    networks:
+      - accf-custom
+      - db
+    secrets:
+      - db_password
+      - vnc_password
+    volumes:
+      - ./misc:/misc
+      - ./analysis:/analysis
+    environment:
+      <<: [ *dbenv, *userdiff_experiment ]
+      POSTGRES_HOST: crawler-db
+      WORKER_TYPE: auto
+
+  userdiff_worker1:
+    build:
+      context: .
+      args:
+        <<: *userdiff_experiment
+    depends_on:
+      crawler-db:
+        condition: service_healthy
+    ports:
+      - 55905:5900  
+    networks:
+      - db
+    secrets:
+      - db_password
+      - vnc_password
+    volumes:
+      - ./misc:/misc
+      - ./analysis:/analysis
+    environment:
+      <<: [ *dbenv, *userdiff_experiment ]
+      POSTGRES_HOST: crawler-db
+      WORKER_TYPE: manual
+
+  # Workers for the swap experiment
+  swap_auto:
+    build:
+      context: .
+      args:
+        <<: *swap_experiment
+    depends_on:
+      crawler-db:
+        condition: service_healthy
+    ports:
+      - 55904:5900  
+    networks:
+      - accf-custom
+      - db
+    secrets:
+      - db_password
+      - vnc_password
+    volumes:
+      - ./misc:/misc
+      - ./analysis:/analysis
+    environment:
+      <<: [ *dbenv, *swap_experiment ]
+      POSTGRES_HOST: crawler-db
+      WORKER_TYPE: auto
+
+
+secrets:
+  db_password:
+    file: crawler/secrets/db_password.txt
+  vnc_password:
+    file: crawler/secrets/vnc_password.txt
+
+volumes:
+  db:
+    driver: local
+
+networks:
+  accf-custom:
+    name: "accf-custom"
+  db:
