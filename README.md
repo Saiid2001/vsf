@@ -31,7 +31,7 @@ You can find the instructions [here](docs/MIRRORING.md).
 We offer a graphical interface for manual inspection of the swap candidates. You can find the instructions to set it up [here](docs/ANALYSIS.md).
 
 ## Setup
-Run `git clone https://github.com/Saiid2001/ethic-bac --recurse-submodules`, then follow the instructions in the respective subproject folders.
+Run `git clone https://github.com/Saiid2001/vsf --recurse-submodules`, then follow the instructions in the respective subproject folders.
 
 ## Contact
 
