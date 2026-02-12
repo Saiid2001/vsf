@@ -47,6 +47,6 @@ You can cite our work with the following BibTeX entry:
  author = {El Hajj Chehade, Saiid and Hantke, Florian and Stock, Ben},
  booktitle = {IEEE Symposium on Security and Privacy},
  title = {{403 Forbidden? Ethically Evaluating Broken Access Control in the Wild}},
- year = {2024},
+ year = {2025},
 }
 ```
