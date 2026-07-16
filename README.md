@@ -1,52 +1,64 @@
 # 403 Forbidden? Ethically Evaluating Broken Access Control in the Wild
 
-This repository contains the code of our paper "403 Forbidden? Ethically Evaluating Broken Access Control in the Wild" IEEE S&P 2025.
-
-> [!NOTE]
-> This is a work in progress. The instructions below are not yet complete. TODO: Update instructions, clean up code, and add more documentation.
-
+This repository contains the research artifact for our paper
+[*403 Forbidden? Ethically Evaluating Broken Access Control in the Wild*](https://saidhajjchehade.com/publications) (IEEE S&P 2025).
 
 ## Goal
-The goal of this project is testing API endpoints for live websites to find broken access control vulnerabilities. Varying the parameters randomly might expose unauthorized resources of random internet users, which is an ethical violation of their privacy. So, we design a differential experiment by controlling two accounts and trying to access the resources of one account using the other account's credentials.
+
+Testing API endpoints of live websites for broken access control (BAC) vulnerabilities has an ethical hazard: mutating parameters at random can expose the private resources of uninvolved users. VSF (Variable Swapping Framework) sidesteps this by running a *differential* experiment -- we control two accounts on the same site and swap parameters between them, so any unauthorized access only ever reveals data belonging to the researchers.
 
 ## Code Organization
-The code is organized as follows:
-- [`/framework`](./framework/): Contains the code to deploy the Variable Swapping Framework (VSF) Docker containers.
-- [`/request-viewer`](./request-viewer/): A simple local web application interface to view and analyze the requests and responses collected by the VSF.
-- [`/stats`](./stats/): Contains the code to generate statistics from the collected data that appear in the paper.
-- [`/docs`](./docs/): Contains the documentation of the project, instructions to set up the VSF, and the analysis tool.
+
+- [`framework/`](./framework/) — Docker containers that run the VSF crawlers, request mirrors, and swap workers.
+- [`request-viewer/`](./request-viewer/) — Local Next.js web app for reviewing swap candidates and results ([docs](./docs/ANALYSIS.md)).
+- [`stats/`](./stats/) — Scripts that produce the tables and figures in the paper ([docs](./stats/README.md)).
+- [`docs/`](./docs/) — Setup and workflow documentation.
 
 ## High-Level Overview
-Testing websites with the VSF consists of the following high-level steps:
 
-1. **Creating user accounts**: We create two user accounts for each website. For this, we repurpose the [Account Framework](https://github.com/cispa/login-security-landscape).
-<!-- You can find the instructions [here](docs/REGISTRATION.md). -->
+Running VSF against a site consists of four steps:
 
-2. **Mirrored website Visit**: We visit each website with both account, perform the same actions, and record the request/response pairs. We modify [Playwright](https://github.com/Saiid2001/playwright) to be able to transmit actions between two browsers (a leader and a follower).
-You can find the instructions [here](docs/MIRRORING.md).
-
-3. **Generating & Sending Probing Requests**: A separate VSF container automatically generates probing requests by swapping the parameters of the requests collected in the previous step. An HTTP worker sends these requests to the website.
-
-3. **Analyzing candidates**: We analyze the request/response pairs to find candidates that might be used to access unauthorized resources. VSF pre-filters the candidates and then we manually inspect the remaining candidates with a [Request Viewer](./request-viewer/) local web-app.
-We offer a graphical interface for manual inspection of the swap candidates. You can find the instructions to set it up [here](docs/ANALYSIS.md).
+1. **Account creation.** Two accounts are created on the target site through the [Account Framework](https://github.com/cispa/login-security-landscape) (bundled as a submodule).
+2. **Mirrored visit.** Both accounts visit the site in lockstep using our modified [Playwright fork](https://github.com/Saiid2001/playwright) — one browser leads, the other follows — and every request/response pair is recorded. Setup: [`docs/MIRRORING.md`](./docs/MIRRORING.md).
+3. **Probing.** A separate VSF container generates *swapped* requests (parameters from account A replayed with account B's credentials) and dispatches them via an HTTP worker.
+4. **Analysis.** VSF pre-filters swap candidates; the remaining candidates are inspected manually in the [Request Viewer](./request-viewer/). Setup: [`docs/ANALYSIS.md`](./docs/ANALYSIS.md).
 
 ## Setup
-Run `git clone https://github.com/Saiid2001/vsf --recurse-submodules`, then follow the instructions in the respective subproject folders.
+
+```bash
+git clone --recurse-submodules https://github.com/Saiid2001/vsf
+cd vsf/framework
+python3 create_secrets.py       # generate random DB / VNC passwords
+docker compose up --build -d
+```
+
+Then follow the per-step instructions in [`docs/`](./docs/).
+
+### Playwright fork
+
+VSF depends on a fork of Playwright ([`Saiid2001/playwright`](https://github.com/Saiid2001/playwright)) that adds the *leader/follower* transport used during mirrored visits — the leader browser broadcasts user actions and the follower replays them in a second session. The fork is vendored as the `framework/playwright` submodule; when clean upstream Playwright is used, mirrored recording will not work.
+
+## Responsible Use
+
+VSF is a security research tool. Please read [`SECURITY.md`](./SECURITY.md) before running it against any site you do not own — it covers target selection, authorization, and responsible disclosure.
 
 ## Contact
 
-If there are questions about our tools or paper, please either file an issue or contact `saiid.elhajjchehade (AT) epfl.ch`
+For questions about the tools or the paper, open an issue or email `saiid.elhajjchehade (AT) epfl.ch`.
 
-## Research Paper
-
-<!-- The paper is available at the IEEE Computer Society Digital Library.  -->
-You can cite our work with the following BibTeX entry:
+## Citation
 
 ```bibtex
 @inproceedings{saiid2025EthicBAC,
- author = {El Hajj Chehade, Saiid and Hantke, Florian and Stock, Ben},
- booktitle = {IEEE Symposium on Security and Privacy},
- title = {{403 Forbidden? Ethically Evaluating Broken Access Control in the Wild}},
- year = {2025},
+  author    = {El Hajj Chehade, Saiid and Hantke, Florian and Stock, Ben},
+  booktitle = {IEEE Symposium on Security and Privacy},
+  title     = {{403 Forbidden? Ethically Evaluating Broken Access Control in the Wild}},
+  year      = {2025},
 }
 ```
+
+A machine-readable version is available in [`CITATION.cff`](./CITATION.cff).
+
+## License
+
+MIT — see [`LICENSE`](./LICENSE).

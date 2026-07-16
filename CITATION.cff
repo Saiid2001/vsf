@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use VSF or reference the study in academic work, please cite the paper below."
+title: "VSF - Variable Swapping Framework"
+abstract: "Research artifact for the IEEE S&P 2025 paper '403 Forbidden? Ethically Evaluating Broken Access Control in the Wild'. VSF is a differential testing framework that detects broken access control on live websites without exposing uninvolved users' data."
+type: software
+authors:
+  - family-names: "El Hajj Chehade"
+    given-names: "Saiid"
+    affiliation: "EPFL"
+    email: "saiid.elhajjchehade@epfl.ch"
+  - family-names: "Hantke"
+    given-names: "Florian"
+    affiliation: "CISPA Helmholtz Center for Information Security"
+  - family-names: "Stock"
+    given-names: "Ben"
+    affiliation: "CISPA Helmholtz Center for Information Security"
+license: MIT
+repository-code: "https://github.com/Saiid2001/vsf"
+preferred-citation:
+  type: conference-paper
+  title: "403 Forbidden? Ethically Evaluating Broken Access Control in the Wild"
+  year: 2025
+  collection-title: "IEEE Symposium on Security and Privacy"
+  authors:
+    - family-names: "El Hajj Chehade"
+      given-names: "Saiid"
+    - family-names: "Hantke"
+      given-names: "Florian"
+    - family-names: "Stock"
+      given-names: "Ben"

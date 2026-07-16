@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Request Viewer
 
-## Getting Started
+A local Next.js web app for reviewing the swap candidates produced by [VSF](../README.md). After a mirroring + swap run, the viewer connects to the crawler Postgres database and lets you page through candidate request/response pairs, compare the original and swapped responses side by side, and mark candidates as interesting or benign.
 
-First, run the development server:
+The full analyst workflow — including how the viewer fits into a VSF experiment — is documented in [`../docs/ANALYSIS.md`](../docs/ANALYSIS.md).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js 20+ and npm (matches the version pinned in the framework Dockerfile).
+- A running VSF crawler Postgres DB (see [`../framework/README.md`](../framework/README.md)). The DB is exposed on `127.0.0.1:55434` by the default `docker-compose.yml`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create `request-viewer/.env` with your DB coordinates:
 
-## Learn More
+   ```bash
+   DB_HOST=127.0.0.1
+   DB_PORT=55434
+   DB_USER=postgres
+   DB_PASSWORD="<contents of framework/crawler/secrets/db_password.txt>"
+   DB_NAME="userdiff_manual___YYYY_MM_DD_HH_MM_SS"
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies and start the dev server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   cd request-viewer
+   npm install
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Open <http://localhost:3000>.
 
-## Deploy on Vercel
+## Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app/` — Next.js App Router pages and API routes.
+- `db.ts` — Postgres connection pool and query helpers.
+- `tailwind.config.ts`, `postcss.config.mjs` — styling.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+
+- The viewer is read-mostly against the crawler DB; it also writes analyst labels back to the same DB. Do not point it at a production database.
+- No authentication is built in — run it on localhost only.

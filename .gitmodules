@@ -3,4 +3,4 @@
 	url = https://github.com/Saiid2001/playwright
 [submodule "framework/AccountFramework"]
 	path = framework/AccountFramework
-	url = git@github.com:Saiid2001/login-security-landscape.git
+	url = https://github.com/Saiid2001/login-security-landscape.git

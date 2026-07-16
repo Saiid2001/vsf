@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:20.04
 ENV TZ=Europe/Berlin
 ENV DEBIAN_FRONTEND noninteractive
 ARG EXPERIMENT

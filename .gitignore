@@ -1,1 +1,48 @@
-/.DS_Store
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.next/
+out/
+dist/
+build/
+coverage/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+framework/**/secrets/
+!framework/**/secrets/.gitkeep
+
+# Logs / tmp
+*.log
+*.tmp
+tmp/
+logs/
